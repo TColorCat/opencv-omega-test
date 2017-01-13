@@ -7,37 +7,13 @@
 #include<opencv.hpp>
 #include<imgproc\imgproc.hpp>
 #include<highgui\highgui.hpp>
+#include"Test_function.h"
 using namespace std;
 using namespace cv;
 int _tmain(int argc, _TCHAR* argv[])
 {
-	Mat img = imread("F://2.jpg");
-
-	imshow("picture", img);
-	Mat sample = getStructuringElement(MORPH_RECT, Size(30, 30));
-	imshow("select picture", sample);
-
-	Mat eroderesult;
-	erode(img, eroderesult, sample);//Í¼Ïñ¸¯Ê´
-	imshow("result", eroderesult);
-	Mat blurresult;
-	//Í¼ÏñÄ£ºý
-	blur(img, blurresult, Size(3, 3));
-	imshow("blurresult", blurresult);
-
-	//±ßÔµ¼ì²â  »Ò¶ÈÍ¼£¬½µÔë£¬canny±ßÔµ¼ì²â
-	Mat grayimg;
-	cvtColor(img, grayimg, COLOR_BGR2GRAY);//»Ò¶È
-
-	Mat edge;
-	blur(grayimg, edge, Size(3, 3));//½µÔë
-
-	Canny(edge, edge, 3, 9, 3);//Ñ°±ß
-
-	imshow("edge", edge);
-
-	waitKey(0);
-	return 0;
+	test_functions::Test_blur("F://2.jpg");
+	
 	return 0;
 }
 
