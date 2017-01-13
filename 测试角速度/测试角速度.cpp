@@ -12,8 +12,8 @@ using namespace std;
 using namespace cv;
 int _tmain(int argc, _TCHAR* argv[])
 {
-	test_functions::Test_blur("F://2.jpg");
-	
+	//test_functions::Test_blur("F://2.jpg");
+	test_functions::Test_using_selfcamera(0);
 	return 0;
 }
 

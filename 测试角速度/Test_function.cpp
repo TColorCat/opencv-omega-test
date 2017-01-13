@@ -56,3 +56,20 @@ void test_functions::Test_canny(const std::string& filepath)
 
 	waitKey(0);
 }
+
+//template<typename T>
+/*@param device id of the opened video capturing device (i.e. a camera index). If there is a single
+    camera connected, just pass 0.
+*/
+void test_functions::Test_using_selfcamera(const int&in)
+{
+	//摄像头读入视频
+	VideoCapture capture(in);
+	while (1)
+	{
+		Mat frame;
+		capture >> frame;
+		imshow("读取视频", frame);
+		waitKey(30);//延时30ms
+	}
+}
