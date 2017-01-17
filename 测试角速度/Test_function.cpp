@@ -57,6 +57,23 @@ void test_functions::Test_canny(const std::string& filepath)
 	waitKey(0);
 }
 
+void test_functions::Test_harris(const std::string&filepath)
+{
+	Mat srcimg = imread(filepath, 0);
+	imshow("origin", srcimg);
+	Mat cornerStrength;
+	cornerHarris(srcimg, cornerStrength, 2, 3, 0.01);
+	Mat harriscorner;
+
+	threshold(cornerStrength, harriscorner, 0.00001, 255, THRESH_BINARY);
+
+	imshow("final", harriscorner);
+	waitKey(0)
+		;
+	
+}
+
+
 //template<typename T>
 /*@param device id of the opened video capturing device (i.e. a camera index). If there is a single
     camera connected, just pass 0.
