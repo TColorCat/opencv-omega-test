@@ -8,7 +8,8 @@
 #include<highgui\highgui.hpp>
 
 using namespace cv;
-void test_functions::Test_erobe(const std::string& filepath)
+
+void test_functions::methods::Test_erobe(const std::string& filepath)
 {
 	Mat img = imread(filepath);
 
@@ -22,7 +23,7 @@ void test_functions::Test_erobe(const std::string& filepath)
 	waitKey(0);
 }
 
-void test_functions::Test_blur(const std::string& filepath)
+void test_functions::methods::Test_blur(const std::string& filepath)
 {
 	Mat img = imread(filepath);
 
@@ -37,7 +38,7 @@ void test_functions::Test_blur(const std::string& filepath)
 	imshow("blurresult", blurresult);
 	waitKey(0);
 }
-void test_functions::Test_canny(const std::string& filepath)
+void test_functions::methods::Test_canny(const std::string& filepath)
 {
 	Mat img = imread(filepath);
 
@@ -57,7 +58,7 @@ void test_functions::Test_canny(const std::string& filepath)
 	waitKey(0);
 }
 
-void test_functions::Test_harris(const std::string&filepath)
+void test_functions::methods::Test_harris(const std::string&filepath)
 {
 	Mat srcimg = imread(filepath, 0);
 	imshow("origin", srcimg);
@@ -73,7 +74,7 @@ void test_functions::Test_harris(const std::string&filepath)
 }
 
 /*overload input mat*/
-cv::Mat test_functions::Test_erobe(const Mat& img)//input Mat
+cv::Mat test_functions::methods::Test_erobe(const Mat& img)//input Mat
 {
 	//imshow("picture", img);
 	Mat sample = getStructuringElement(MORPH_RECT, Size(30, 30));
@@ -83,7 +84,7 @@ cv::Mat test_functions::Test_erobe(const Mat& img)//input Mat
 	erode(img, eroderesult, sample);//ÕºœÒ∏Ø ¥
 	return eroderesult;
 }
-cv::Mat  test_functions::Test_blur(const Mat& img)
+cv::Mat  test_functions::methods::Test_blur(const Mat& img)
 {
 	//imshow("picture", img);
 	Mat sample = getStructuringElement(MORPH_RECT, Size(30, 30));
@@ -95,7 +96,7 @@ cv::Mat  test_functions::Test_blur(const Mat& img)
 	blur(img, blurresult, Size(3, 3));
 	return blurresult;
 }
-cv::Mat  test_functions::Test_canny(const Mat& img)
+cv::Mat  test_functions::methods::Test_canny(const Mat& img)
 {
 	//imshow("picture", img);
 
@@ -110,7 +111,7 @@ cv::Mat  test_functions::Test_canny(const Mat& img)
 
 	return edge;
 }
-cv::Mat  test_functions::Test_harris(const Mat&srcimg)
+cv::Mat  test_functions::methods::Test_harris(const Mat&srcimg)
 {
 	//imshow("origin", srcimg);
 	Mat cornerStrength;
@@ -122,12 +123,15 @@ cv::Mat  test_functions::Test_harris(const Mat&srcimg)
 	return harriscorner;
 	
 }
+/*
 
-/*@param id is the opened video capturing device (i.e. a camera index).
-		If there is a single camera connected, just pass 0.
-  @param void(*pi)(const cv::Mat&) is a function pointer to get img processing methods 
-  @param int wait is a parameter for waitKey() in each frame process;
-	*/
+@Attention: captured camera on self-computer img is RGB-type.
+it is recommanded to match the img-type between input-camera and methods needed img-type
+@param id is the opened video capturing device (i.e. a camera index).
+If there is a single camera connected, just pass 0.
+@param Mat(*pi)(const cv::Mat&) is a function pointer to get img processing methods
+@param int wait is a parameter for waitKey() in each frame process;
+*/
 void test_functions::Test_using_selfcamera(const int&id,cv::Mat(*pi)(const cv::Mat&),int wait)
 {
 	//…„œÒÕ∑∂¡»Î ”∆µ

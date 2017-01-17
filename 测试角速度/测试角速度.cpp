@@ -19,7 +19,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//test_functions::Test_using_selfcamera(0);
 	//test_functions::Test_harris("F://2.jpg");
 
-	test_functions::Test_using_selfcamera(0, test_functions::Test_harris, 10);
+	test_functions::Test_using_selfcamera(0, test_functions::methods::Test_harris, 10);
 
 	
 	//finish = clock();
