@@ -67,13 +67,22 @@ namespace camera_param
 	void calRealPoint(vector<vector<Point3f>>& obj, int boardwidth, int boardheight, int imgNumber, int squaresize);
 
 	/*计算标定板被摄像机记录下的角点图像坐标*/
-	void calImg_cornerPoint(vector<Mat>&imgs, vector<vector<Point2f>>&, const Size boardSize);
+	void calImg_cornerPoint(vector<Mat>&imgs, vector<vector<Point2f>>&, const Size boardSize,const string&);
 
 	/*计算单目相机内外参*/
 	void calSingle_param(vector<vector<Point3f>>&objRealPoint,
 							vector<vector<Point2f>>&img_corners,
 							const Size& boardSize,
 							parame_carmera&car);
+
+
+
+
+
+	namespace test_example
+	{
+		void test_cal_img_cornerPoint(const string&input, const string&output);
+	}
 	
 }
 
