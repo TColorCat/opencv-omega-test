@@ -2,7 +2,7 @@
 #include"stdafx.h"
 #include"Test_function.h"
 
-#include<cv.h>
+//#include<cv.h>
 #include<opencv.hpp>
 #include<imgproc\imgproc.hpp>
 #include<highgui\highgui.hpp>

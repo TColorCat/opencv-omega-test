@@ -11,6 +11,7 @@
 #include"Test_function.h"
 using namespace std;
 using namespace cv;
+using namespace test_functions;
 int _tmain(int argc, _TCHAR* argv[])
 {
 	//clock_t start, finish;
