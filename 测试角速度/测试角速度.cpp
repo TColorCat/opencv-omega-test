@@ -11,6 +11,7 @@
 #include<highgui\highgui.hpp>
 #include"Test_function.h"
 #include"camera_param.h"
+#include"video_to_pictures.h"
 using namespace std;
 using namespace cv;
 using namespace test_functions;
@@ -24,9 +25,10 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	//test_functions::Test_using_selfcamera(0, test_functions::methods::Test_harris, 10);
 
-	camera_param::test_example::test_cal_img_cornerPoint("E://Opencv30//opencv//sources//samples//data//left01.jpg", "E://Opencv30//master pieces//single");
+	//camera_param::test_example::test_cal_img_cornerPoint("E://Opencv30//opencv//sources//samples//data//left01.jpg", "E://Opencv30//master pieces//single");
 	
-	
+	toPicture::test_function::test_video();
+
 	//finish = clock();
 	//cout << "using time" << finish - start << " ms" << endl;
 	return 0;

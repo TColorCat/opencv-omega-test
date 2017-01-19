@@ -16,6 +16,11 @@ namespace toPicture
 
 		
 	}
+
+	namespace test_function
+	{
+		void test_video();
+	}
 }
 
 #endif
