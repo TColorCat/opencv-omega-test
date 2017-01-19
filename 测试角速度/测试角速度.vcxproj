@@ -83,6 +83,7 @@
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Test_function.h" />
+    <ClInclude Include="video_to_pictures.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="camera_param.cpp" />
@@ -91,6 +92,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Test_function.cpp" />
+    <ClCompile Include="Videotop.cpp" />
     <ClCompile Include="测试角速度.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

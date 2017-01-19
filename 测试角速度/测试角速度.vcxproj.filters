@@ -30,6 +30,9 @@
     <ClInclude Include="camera_param.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="video_to_pictures.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -42,6 +45,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="camera_param.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Videotop.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
