@@ -2,7 +2,10 @@
 #define test_function_h_
 #include<string>
 #include<cv.h>
-//using cv::Mat;
+#include<iostream>  
+#include<vector>  
+
+using std::vector;
 namespace test_functions
 {
 	
@@ -13,11 +16,16 @@ namespace test_functions
 		void Test_canny(const std::string& filepath);
 		void Test_harris(const std::string&filepath);
 
+		//orb
+		int ORB_test();
 		/*overload input Mat for every mathods*/
 		cv::Mat Test_erobe(const cv::Mat&);//input Mat
 		cv::Mat Test_blur(const cv::Mat&);
 		cv::Mat Test_canny(const cv::Mat&);
 		cv::Mat Test_harris(const cv::Mat&);
+
+		
+		
 	}
 
 
@@ -33,6 +41,8 @@ namespace test_functions
 	@param int wait is a parameter for waitKey() in each frame process;
 	*/
 	void Test_using_selfcamera(const int &,cv::Mat(*)(const cv::Mat&),int waitkeynumber);
+	void Test_using_selfcamera();
+	//void test_orb();
 }
 
 #endif

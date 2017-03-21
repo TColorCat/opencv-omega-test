@@ -3,16 +3,17 @@
 
 #include<cv.h>
 #include<string>
-#include<e:\Opencv30\opencv\build\include\opencv2\videoio.hpp>
+
 using cv::Mat;
 using std::string;
+using cv::VideoCapture;
 namespace toPicture
 {
 	
 
 	namespace VedioTo
 	{
-		void videotoP(cv::VideoCapture&,const string& outfolder );
+		void videotoP(VideoCapture& capture ,const string& outfolder );
 
 		
 	}

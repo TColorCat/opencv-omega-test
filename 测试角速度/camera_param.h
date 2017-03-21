@@ -4,6 +4,8 @@
 #include<iostream>
 #include<string>
 #include<cv.h>
+
+
 //#include <cv.hpp> 
 namespace camera_param
 {

@@ -24,13 +24,13 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Test_function.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="camera_param.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="video_to_pictures.h">
+    <ClInclude Include="Test_function.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ORB_application.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -41,13 +41,13 @@
     <ClCompile Include="测试角速度.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Test_function.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="camera_param.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Videotop.cpp">
+    <ClCompile Include="Test_function.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ORB_application.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

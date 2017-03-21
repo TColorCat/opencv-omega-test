@@ -5,7 +5,7 @@
 #include<imgproc\imgproc.hpp>
 #include<highgui\highgui.hpp>
 using namespace cv;
-void toPicture::VedioTo::videotoP( cv::VideoCapture& capture, const std::string& outfolder)
+void toPicture::VedioTo::videotoP( VideoCapture& capture, const std::string& outfolder)
 {
 	int count = 0;
 //	VideoCapture capture(id);
@@ -21,11 +21,4 @@ void toPicture::VedioTo::videotoP( cv::VideoCapture& capture, const std::string&
 		 imwrite(outfolder + std::to_string(count) + "P.jpg", grayimg);
 		count++;
 	}
-}
-
-void toPicture::test_function::test_video()
-{
-	VideoCapture capture("E://Opencv30\\opencv\\sources\\samples\\data\\768x576.avi");
-	toPicture::VedioTo::videotoP(capture, "E:\\Opencv30\\master pieces\\");
-
 }

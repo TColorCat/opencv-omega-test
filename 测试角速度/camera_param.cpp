@@ -2,7 +2,7 @@
 #include "stdafx.h"
 #include"camera_param.h"
 #include <opencv2/opencv.hpp>  
-#include <highgui.hpp>  
+#include "opencv2/highgui/highgui.hpp"    
 #include<iterator>
 
 using namespace std;

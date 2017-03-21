@@ -2,35 +2,27 @@
 //
 
 #include "stdafx.h"
-#include<iostream>
-#include<ctime>
-#include<string>
-//#include<cv.h>
-#include<opencv.hpp>
-#include<imgproc\imgproc.hpp>
-#include<highgui\highgui.hpp>
+#include <iostream>  
+#include "opencv2/core/core.hpp"  
+#include "opencv2/features2d/features2d.hpp"  
+#include "opencv2/highgui/highgui.hpp"   
+#include "opencv2/legacy/legacy.hpp"   
+#include <vector>  
 #include"Test_function.h"
-#include"camera_param.h"
-#include"video_to_pictures.h"
-using namespace std;
+#include"ORB_application.h"
 using namespace cv;
-using namespace test_functions;
+using namespace std;
+
 int _tmain(int argc, _TCHAR* argv[])
 {
-	//clock_t start, finish;
-	//start = clock();
-	//test_functions::Test_blur("F://2.jpg");
-	//test_functions::Test_using_selfcamera(0);
-	//test_functions::Test_harris("F://2.jpg");
-
-	//test_functions::Test_using_selfcamera(0, test_functions::methods::Test_harris, 10);
-
-	//camera_param::test_example::test_cal_img_cornerPoint("E://Opencv30//opencv//sources//samples//data//left01.jpg", "E://Opencv30//master pieces//single");
 	
-	toPicture::test_function::test_video();
+	//test_functions::methods::ORB_test();
 
-	//finish = clock();
-	//cout << "using time" << finish - start << " ms" << endl;
+	Mat img_1 = imread("book-1.bmp");
+	Mat img_2 = imread("book-reference.bmp");
+
+	ORB_application::ORB_two_pictures(img_1, img_2);
+
 	return 0;
 }
 
